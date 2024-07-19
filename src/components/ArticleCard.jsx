@@ -18,7 +18,6 @@ class ArticleCard extends Component {
 
     // Open link in new tab
     handleReadMore(details) {
-        // window.open(url, '_blank');
         this.props.history.push({
             pathname: `/article/${details.id}`,
             state: details
