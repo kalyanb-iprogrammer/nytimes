@@ -55,6 +55,11 @@ class ArticleList extends Component {
     render() {
         const { data, loading } = this.state;
 
+        // Loading UI
+        if (loading) {
+            return <p>Loading ...</p>;
+        }
+
         return (
             <div>
                 <h1>NY Times Most Popular News</h1>
@@ -64,13 +69,13 @@ class ArticleList extends Component {
                     {data.map((item) => {
                         return (
                             <Row key={item.id}>
-                                <Col 
-                                lg={{offset: 2, span: 8 }} 
-                                md={{offset: 2, span: 8 }} 
-                                sm={{offset: 2, span: 8 }} 
-                                xs={{offset: 2, span: 8 }} 
+                                <Col
+                                    lg={{ offset: 2, span: 8 }}
+                                    md={{ offset: 2, span: 8 }}
+                                    sm={{ offset: 2, span: 8 }}
+                                    xs={{ offset: 2, span: 8 }}
                                 >
-                                <ArticleCard details={item} />
+                                    <ArticleCard details={item} />
                                 </Col>
                             </Row>
                         )
