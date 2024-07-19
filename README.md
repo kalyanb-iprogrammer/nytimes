@@ -5,7 +5,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Open another tab in terminal . Switch back to project root directory and execute below command
    ```sh
-   cd nytimes-clone
+   cd nytimes
    ```
 2. Install all packages
    ```sh
